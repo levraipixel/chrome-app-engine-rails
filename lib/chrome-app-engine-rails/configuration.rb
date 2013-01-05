@@ -1,5 +1,3 @@
-puts "LOAD #{__FILE__}"
-
 module ChromeAppEngineRails
 
   def self.config

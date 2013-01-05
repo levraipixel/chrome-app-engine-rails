@@ -1,5 +1,3 @@
-puts "LOAD #{__FILE__}"
-
 namespace :chrome_app do
 
   task :watch => :environment do
@@ -75,7 +73,7 @@ namespace :chrome_app do
     builder.build_resources
     builder.build_manifest
     builder.build_file
-    # builder.clean_tmp_dir
+    builder.clean_tmp_dir
       
   end
 

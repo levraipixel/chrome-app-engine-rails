@@ -1,5 +1,3 @@
-puts "LOAD #{__FILE__}"
-
 module ChromeAppEngineRails
 
   class Builder
@@ -65,7 +63,7 @@ module ChromeAppEngineRails
         FileUtils.mkdir_p File.dirname(output_path)
         FileUtils.cp self.application.root.join("public", self.config.tmp_assets_prefix, f), output_path
       end
-      # FileUtils.remove_dir self.application.root.join("public", self.config.tmp_assets_prefix), true
+      FileUtils.remove_dir self.application.root.join("public", self.config.tmp_assets_prefix), true
     end
 
     def rebuild_dev_assets
