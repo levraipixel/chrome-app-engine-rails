@@ -12,14 +12,8 @@ module Sass
       end
       
       class_eval %Q{
-        def image_chrome_url(asset)
-          Sass::Script::String.new("url('chrome-extension://__MSG_@@extension_id__/img/" + asset.value.to_s + "')")
-          end
-      }, __FILE__, __LINE__ - 3
-
-      class_eval %Q{
-        def font_chrome_url(asset)
-          Sass::Script::String.new("url('chrome-extension://__MSG_@@extension_id__/font/" + asset.value.to_s + "')")
+        def chrome_resource_url(asset)
+          Sass::Script::String.new("url('chrome-extension://__MSG_@@extension_id__/resources/" + asset.value.to_s + "')")
           end
       }, __FILE__, __LINE__ - 3
 
