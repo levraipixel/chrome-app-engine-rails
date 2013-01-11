@@ -65,7 +65,7 @@ namespace :chrome_app do
     builder = ::ChromeAppEngineRails::Builder.new(Rails.application)
     builder.rebuild_tmp_dir
 
-    cmd = "rake assets:precompile RAILS_ENV=#{Rails.env} #{builder.config.chrome_build_env}=true"
+    cmd = "rake assets:precompile:all RAILS_ENV=#{Rails.env} RAILS_GROUPS=assets #{builder.config.chrome_build_env}=true"
     puts cmd
     system cmd
     
